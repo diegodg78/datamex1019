@@ -1,0 +1,2 @@
+MacBook-Air-de-diego-2:~ diegogomez$ echo 'hello world!'
+hello world!
