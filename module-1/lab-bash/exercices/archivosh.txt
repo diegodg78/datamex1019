@@ -1,0 +1,11 @@
+MacBook-Air-de-diego-2:~ diegogomez$ vi list_files.sh
+MacBook-Air-de-diego-2:~ diegogomez$ cat list_files.sh
+#!/bin/bash
+ls
+MacBook-Air-de-diego-2:~ diegogomez$ sh list_files.sh
+Applications		Library			Tec
+Desktop			Movies			express
+Documents		Music			list_files.sh
+Downloads		Pictures		node_modules
+FOTOS			Public			package-lock.json
+Justinmind		PycharmProjects
