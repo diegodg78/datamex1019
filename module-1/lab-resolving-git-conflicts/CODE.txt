@@ -1,0 +1,157 @@
+MacBook-Air-de-diego-2:module-1 diegogomez$ cd lab-resolving-git-conflicts
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git log
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+Merge: b33488d bda5665
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+Merge: b33488d bda5665
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:59:06 2019 -0500
+
+    problema2
+
+
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+Merge: b33488d bda5665
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:59:06 2019 -0500
+
+    problema2
+
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+Merge: b33488d bda5665
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:59:06 2019 -0500
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+Merge: b33488d bda5665
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:59:06 2019 -0500
+
+    problema2
+
+commit bda5665195f8ec2e90cc3c73a87ab0465fc13a98
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:56:10 2019 -0500
+
+    masterr
+
+commit b4d00e2e24619abea084c642ba27b9e78a4384fa
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:54:04 2019 -0500
+
+    sa
+
+commit b33488dc221dce72fdab6a3833ef61ead761d417
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:47:58 2019 -0500
+
+    2.1
+
+commit 242d427ccbf3d7b26bcd1a7c7ed78db7d3a85336
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git branch
+  lab-bash
+* lab-git
+  master
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git status
+On branch lab-git
+nothing to commit, working tree clean
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git log
+commit bbaae94d1bfdbf11c6ba490578ba36088795975f
+Merge: b33488d bda5665
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:59:06 2019 -0500
+
+    problema2
+
+commit bda5665195f8ec2e90cc3c73a87ab0465fc13a98
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:56:10 2019 -0500
+
+    masterr
+
+commit b4d00e2e24619abea084c642ba27b9e78a4384fa
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:54:04 2019 -0500
+
+    sa
+
+commit b33488dc221dce72fdab6a3833ef61ead761d417
+Author: Diego Gomez <diegogomezchivas@gmail.com>
+Date:   Mon Oct 21 17:47:58 2019 -0500
+
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git reset --hard bda5665195f8ec2e90cc3c73a87ab0465fc13a98
+HEAD is now at bda5665 masterr
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ ls
+README.md		git-conflict.png	your-code
+conflict-merged.png	git-pull-request.png
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git status
+On branch lab-git
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .DS_Store
+	modified:   your-code/about-me.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git add .DS_Store
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git add your-code/about-me.md
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git commit -m "final"
+[lab-git d1f6e0b] final
+ 2 files changed, 24 insertions(+), 7 deletions(-)
+ rewrite module-1/lab-resolving-git-conflicts/your-code/about-me.md (99%)
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git push origin lab-git
+To https://github.com/diegodg78/datamex1019.git
+ ! [rejected]        lab-git -> lab-git (non-fast-forward)
+error: failed to push some refs to 'https://github.com/diegodg78/datamex1019.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git status
+On branch lab-git
+nothing to commit, working tree clean
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git merge origin master
+Already up-to-date.
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git push origin lab-git
+To https://github.com/diegodg78/datamex1019.git
+ ! [rejected]        lab-git -> lab-git (non-fast-forward)
+error: failed to push some refs to 'https://github.com/diegodg78/datamex1019.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git push --help
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git push
+fatal: The current branch lab-git has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin lab-git
+
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git merge lab-git
+Updating bda5665..d1f6e0b
+Fast-forward
+ module-1/lab-resolving-git-conflicts/.DS_Store     | Bin 6148 -> 8196 bytes
+ .../your-code/about-me.md                          |  25 +++++++++++++++++----
+ 2 files changed, 21 insertions(+), 4 deletions(-)
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git checkout lab-git
+Switched to branch 'lab-git'
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git status
+On branch lab-git
+nothing to commit, working tree clean
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git pull origin master
+From https://github.com/diegodg78/datamex1019
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git status
+On branch lab-git
+nothing to commit, working tree clean
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$ git status
+On branch lab-git
+nothing to commit, working tree clean
+MacBook-Air-de-diego-2:lab-resolving-git-conflicts diegogomez$
